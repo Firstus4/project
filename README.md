@@ -43,19 +43,20 @@ The project includes:
 ## 🏗️ Project Structure
 
 ```
-mosudi-tech-profile/
-├── app/
+Website/
+├── /
 │   ├── routes.py
 │   ├── static/
 │   └── templates/
+├── .venv/
+├── protected/
+│   ├── Festus_Resume.pdf
 ├── images/
 │   ├── preview-desktop.png
 │   └── preview-mobile.png
 ├── app.py
-├── main.wsgi
-├── requirements.txt
 ├── README.md
-└── .venv/
+└── requirements.txt
 ```
 
 > The `website` directory contains all core Flask logic, static assets, and templates.
