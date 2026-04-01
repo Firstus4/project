@@ -409,6 +409,42 @@ body {
   .container {
     max-width: 1200px; } }
 
+/* Mobile responsive adjustments */
+@media screen and (max-width: 768px) {
+  .section-content {
+    position: relative;
+    margin-top: 2rem;
+    padding: 2rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .about-image {
+    padding-left: 0;
+  }
+
+  .lead,
+  .word {
+    font-size: 1rem;
+    padding-right: 0;
+    margin-bottom: 1.25rem;
+  }
+
+  .focus {
+    padding: 1rem 0.5rem;
+    font-size: 1.2rem;
+  }
+
+  .mobile-nav-toggle {
+    font-size: 2rem;
+  }
+}
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
