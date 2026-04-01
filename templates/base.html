@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block head %}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}Festus Profile{% endblock %}</title>
+
+        <!-- SEO Meta Tags -->
+        <meta name="description" content="Explore Festus Olubiyi's personal portfolio on web development, technology, and creative projects.">
+        <meta name="keywords" content="Festus Olubiyi, portfolio, web development, technology, Accounting, Finance, Systems Engineer, IoT">
+        <meta name="author" content="Festus Olubiyi">
+        <meta name="robots" content="index, follow">
+
+        <!-- Social Media / Open Graph Tags -->
+        <meta property="og:title" content="Festus Olubiyi - Portfolio & Blog">
+        <meta property="og:description" content="Festus Olubiyi, portfolio, web development, technology, Accounting, Finance, Systems Engineer, IoT">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://www.firstus.com">
+        <meta property="og:image" content="https://www.firstus.com/og-image.jpg">
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Festus Olubiyi - Portfolio & Blog">
+        <meta name="twitter:description" content="Festus Olubiyi, portfolio, web development, technology, Accounting, Finance, Systems Engineer, IoT">
+        <meta name="twitter:image" content="https://www.firstus.com/og-image.jpg">
+
+        <!-- Bootstrap 5.3.8 CSS -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-icons.css') }} ">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }} ">
+
+        <!-- AOS (Animate On Scroll) -->
+        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+        <!--Animate -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.min.css') }} ">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/animations.css') }} ">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.min.css') }} ">
+
+        <!-- Favicon -->
+        <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+        
+        <!-- Styling CSS -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }} ">
+
+        <!-- Structured Data: JSON-LD for Google SEO -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Festus Olubiyi",
+            "url": "https://www.firstus.com",
+            "sameAs": [
+            "https://www.linkedin.com/in/olubiyifestus",
+            "https://github.com/firstus4",
+            "https://twitter.com/firstus_1"
+            ],
+            "jobTitle": "Web Developer & Tech Enthusiast",
+            "worksFor": {
+            "@type": "Organization",
+            "name": "Personal Portfolio"
+            },
+            "knowsAbout": ["Web Development", "Python", "IoT", "Technology"]
+        }
+        </script>
+        {% endblock %}
+    </head>
+   
+
+    <body>
+        <!-- Navigtion Panel -->
+        {% include 'include/navigation.html' %}
+
+        <!-- loader  -->
+       {% block escape %} {% include 'include/loader.html' %} {% endblock %} 
+
+        <!-- content -->
+        {% block content %} {% endblock %}
+
+        <!-- main content -->
+        {% block main %} {% endblock %}
+
+         <!-- about -->
+        {% block about %} {% endblock %}
+
+        <!-- contact -->
+        {% block contact %} {% endblock %}
+
+        <!-- resume -->
+        {% block resume %} {% endblock %}
+
+        {% if request.path in ['/contact', '/resume'] %}
+        <a href="https://wa.me/2349022963079?text=Hello%20Festus,%20I%20would%20like%20to%20talk%20to%20you" target="_blank" class="whatsapp-float" aria-label="WhatsApp chat">
+            <i class="bi bi-whatsapp"></i>
+        </a>
+        {% endif %}
+
+        <a href="#" class="back-to-top d-flex align-items-center justify-content-center" id="backToTop"><i class="bi bi-arrow-up-short"></i></a>
+
+    
+    </body>
+    <footer>
+        <!-- footer -->
+        {% include 'include/footer.html' %}     
+    </footer>
+
+    {% block main_scripts %}
+    <!-- Typed.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    
+    <!-- Bootstrap.js -->
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+
+    <!-- AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
+
+    <!-- Libraries required by main.js -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+    <!-- Project scripts -->
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+
+    {% endblock %}
+</html>
+
+    
+        
+    
+
+

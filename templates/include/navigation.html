@@ -1,0 +1,26 @@
+<header id="header" class="d-flex align-items-center sticky-top">
+    <div class="container  d-flex align-items-center justify-content-between">
+
+        <a href="{{ url_for('index') }}">
+            <img class="fs" src="{{ url_for('static', filename='images/Unit.jpg') }}" alt="smiles">
+            <h1 class="logo"><a href="/">Firstus</a></h1>
+            <span class="fs-5">Festus O. O.</span>
+        </a>
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto {% if request.path == '/' %}active{% endif %}" href="/">Home</a></li>
+
+                <li><a class="nav-link {% if request.path == '/#services' %}active{% endif %}" href="/#services">Service</a></li>
+
+                <li><a class="nav-link {% if request.path == '/#about' %}active{% endif %}" href="/#about">About</a></li>
+
+                <li><a class="nav-link {% if request.path == '/resume' %}active{% endif %}" href="{{ url_for('resume') }}">Resume</a></li>
+
+                <li><a class="nav-link {% if request.path == '/contact' %}active{% endif %}" href="{{ url_for('contact') }}">Contact Me</a></li>
+                
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+    </div>
+</header>

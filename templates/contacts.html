@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact &vert; Festus Olubiyi{% endblock %}
+
+{% block escape %} {% endblock %} 
+
+{% block contact %}
+<section class="contact section">
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up" data-aos-delay="200">
+    <h3 class="focus mb-4 text-center">Contact</h3>
+  </div><!-- End Section Title -->
+
+  <div class="container border rounded-4 shadow-sm" data-aos="fade-up" data-aos-delay="100">
+    
+    <div class="info-box" data-aos="fade-up" data-aos-delay="200">
+      <h3>Get in Touch</h3>
+      
+      <div class="info-item" data-aos="fade-up" data-aos-delay="300">
+        <div class="icon-box">
+          <i class="bi bi-geo-alt display-6 text-danger"></i>
+        </div>
+        
+        <div class="content">
+          <h4><strong>Location</strong></h4>
+          <p class="lead">32, Mabawonku Street, <br> Oworonshoki, <br>
+          LOS NG 105103</p>
+        </div>
+      </div>
+      
+      <div class="info-item" data-aos="fade-up" data-aos-delay="400">
+        <div class="icon-box">
+          <i class="bi bi-telephone display-6 text-primary"></i>
+        </div>
+
+        <div class="content">
+          <h4><strong>Phone Number</strong></h4>
+          <a href="tel:+2349022963079" class="lead"> +234 902 2963 079</a><br>
+          <a href="tel:+2349064874629" class="lead"> +234 906 4874 629</a>
+        </div>
+      </div>
+      
+      <div class="info-item" data-aos="fade-up" data-aos-delay="500">
+        <div class="icon-box">
+          <i class="bi bi-envelope display-6 text-success"></i>
+        </div>
+        
+        <div class="content">
+          <h4><strong>Email Address</strong></h4>
+          <a href="mailto:festusolubiyi@gmail.com" class="lead">info@itsfirstus.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Alternate Contact Options -->
+   <div class="text-center mt-4" data-aos="zoom-in" data-aos-delay="1500" >
+    <small class="h6 text-muted d-block mb-1" >
+      Alternatively, reach me via:
+    </small>
+    
+    <div class="d-flex justify-content-center gap-3">
+      <a href="https://wa.me/+2349022963079" target="_blank" class="text-decoration-none fw-semibold text-success">
+        <i class="bi bi-whatsapp me-2"></i> WhatsApp Chat
+      </a>
+    </div>
+  </div>
+</section><br>
+
+{% endblock %}
