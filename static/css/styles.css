@@ -413,10 +413,10 @@ body {
 @media screen and (max-width: 768px) {
   .hero {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    min-height: 100vh;
-    padding: 80px 1rem 2rem;
+    min-height: calc(100vh - 80px);
+    padding: 120px 1rem 2rem;
   }
 
   .section {
@@ -430,6 +430,12 @@ body {
     width: 100%;
     max-width: 700px;
     text-align: center;
+    margin-top: 1.5rem;
+  }
+
+  .section-content h1,
+  .section-content h2 {
+    margin-top: 0.25rem;
   }
 
   .about-image {
