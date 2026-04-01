@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+instance/
+.env
+/home/firstus/Desktop/Website/.venv/bin/python /home/firstus/Desktop/Website/app.py
+/home/firstus/Desktop/Website/.venv/bin/python /home/firstus/Desktop/Website/app.py
+/home/firstus/Desktop/Website/.venv/bin/python /home/firstus/Desktop/Website/app.py
+/home/firstus/Desktop/Website/.venv/bin/python /home/firstus/Desktop/Website/app.py
+/home/firstus/Desktop/Website/.venv/bin/python /home/firstus/Desktop/Website/app.py
+
+
