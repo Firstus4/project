@@ -136,16 +136,12 @@
   }, true)
 
   // About image click state
-  const aboutImg = select('#about-photo')
-  const aboutStatus = select('#about-photo-status')
+  const aboutImg = select('#about-image')
+  const aboutStatus = select('#about-image-status')
   if (aboutImg && aboutStatus) {
     aboutImg.addEventListener('click', () => {
       aboutStatus.classList.toggle('active')
       setTimeout(() => aboutStatus.classList.remove('active'), 1200)
-    })
-
-    aboutImg.addEventListener('dragstart', (e) => {
-      e.preventDefault()
     })
   }
 
