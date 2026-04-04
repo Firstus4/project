@@ -183,54 +183,74 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// =======================
-// DARK / LIGHT MODE TOGGLE (SYSTEM + MANUAL)
-// =======================
 document.addEventListener("DOMContentLoaded", () => {
   const toggleBtn = document.getElementById("themeToggle");
   const themeIcon = document.getElementById("themeIcon");
+  const debug = document.getElementById("debugTheme");
 
   const storageKey = "theme";
-
-  const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? "dark"
-    : "light";
-
-  let savedTheme = localStorage.getItem(storageKey);
-  let currentTheme = savedTheme || systemTheme;
-
-  applyTheme(currentTheme);
-
-  // Manual toggle
-  if (toggleBtn) {
-    toggleBtn.addEventListener("click", () => {
-      currentTheme = currentTheme === "dark" ? "light" : "dark";
-      applyTheme(currentTheme);
-      localStorage.setItem(storageKey, currentTheme);
-    });
-  }
-
-  // System change listener
   const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
-  mediaQuery.addEventListener("change", (e) => {
-    if (!localStorage.getItem(storageKey)) {
-      currentTheme = e.matches ? "dark" : "light";
-      applyTheme(currentTheme);
-    }
-  });
+  // =======================
+  // GET INITIAL THEME
+  // =======================
+  function getSystemTheme() {
+    return mediaQuery.matches ? "dark" : "light";
+  }
 
+  function getTheme() {
+    return localStorage.getItem(storageKey) || getSystemTheme();
+  }
+
+  // =======================
+  // APPLY THEME
+  // =======================
   function applyTheme(theme) {
     document.documentElement.setAttribute("data-theme", theme);
 
-    if (!themeIcon) return;
+    // debug on screen
+    if (debug) {
+      debug.innerText = "Theme: " + theme;
+    }
 
-    if (theme === "dark") {
-      themeIcon.classList.remove("bi-sun-fill");
-      themeIcon.classList.add("bi-moon-fill");
-    } else {
-      themeIcon.classList.remove("bi-moon-fill");
-      themeIcon.classList.add("bi-sun-fill");
+    console.log("Theme applied:", theme);
+
+    // icon switch
+    if (themeIcon) {
+      themeIcon.classList.toggle("bi-moon-fill", theme === "dark");
+      themeIcon.classList.toggle("bi-sun-fill", theme === "light");
     }
   }
+
+  // =======================
+  // INIT THEME
+  // =======================
+  applyTheme(getTheme());
+
+  // =======================
+  // MANUAL TOGGLE
+  // =======================
+  if (toggleBtn) {
+    toggleBtn.addEventListener("click", () => {
+      const newTheme =
+        document.documentElement.getAttribute("data-theme") === "dark"
+          ? "light"
+          : "dark";
+
+      localStorage.setItem(storageKey, newTheme);
+      applyTheme(newTheme);
+    });
+  }
+
+  // =======================
+  // SYSTEM THEME CHANGE
+  // =======================
+  mediaQuery.addEventListener("change", (e) => {
+    const saved = localStorage.getItem(storageKey);
+
+    // ONLY follow system if user has NOT chosen manually
+    if (!saved) {
+      applyTheme(e.matches ? "dark" : "light");
+    }
+  });
 });

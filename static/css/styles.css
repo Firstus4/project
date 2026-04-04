@@ -2,24 +2,6 @@
 # Root Variables
 --------------------------------------------------------------*/
 :root {
-  --bg: #131418;
-  --text: #ffffff;
-  --muted: rgba(255,255,255,0.7);
-  --nav: #12151c;
-  --accent: #5c9f24;
-  --accent-hover: #4a821d;
-  --bg-color: #121212;
-  --border-color: #ffffff;
-  --ring-pink: rgb(255, 0, 255);
-  --ring-cyan: rgb(0, 247, 255);
-  --ring-green: rgb(0, 255, 13);
-}
-
-/*--------------------------------------------------------------
-# Light Mode
---------------------------------------------------------------*/
-/* LIGHT MODE */
-[data-theme="light"] {
   --bg: #f8f9fa;
   --text: #000;
   --muted: rgba(0,0,0,0.7);
@@ -28,6 +10,23 @@
   --accent-hover: #4a821d;
   --bg-color:#ffffff;
   --border-color: #000000;
+  --ring-pink: rgb(255, 0, 255);
+  --ring-cyan: rgb(0, 247, 255);
+  --ring-green: rgb(0, 255, 13);
+}
+
+/*--------------------------------------------------------------
+# Dark Mode
+--------------------------------------------------------------*/
+[data-theme="dark"] {
+  --bg: #131418;
+  --text: #ffffff;
+  --muted: rgba(255,255,255,0.7);
+  --nav: #12151c;
+  --accent: #5c9f24;
+  --accent-hover: #4a821d;
+  --bg-color: #121212;
+  --border-color: #ffffff;
   --ring-pink: rgb(255, 0, 255);
   --ring-cyan: rgb(0, 247, 255);
   --ring-green: rgb(0, 255, 13);
