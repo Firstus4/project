@@ -78,6 +78,16 @@ body {
   transition: 0.3s ease;
 }
 
+img {
+  user-select: none;
+}
+
+#about-image {
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
 /*--------------------------------------------------------------
 # Section
 --------------------------------------------------------------*/
@@ -135,10 +145,6 @@ body {
 --------------------------------------------------------------*/
 .about {
   width: 100%;
-}
-
-.about-image {
-  padding-left: 40px;
 }
 
 .lead, 
