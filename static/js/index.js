@@ -183,7 +183,10 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-document.addEventListener("DOMContentLoaded", () => {
+  // =======================
+  // THEME TOGGLE
+  // =======================  
+  document.addEventListener("DOMContentLoaded", () => {
   const toggleBtn = document.getElementById("themeToggle");
   const themeIcon = document.getElementById("themeIcon");
   const debug = document.getElementById("debugTheme");
