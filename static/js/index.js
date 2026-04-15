@@ -189,7 +189,6 @@ document.addEventListener("DOMContentLoaded", function () {
   document.addEventListener("DOMContentLoaded", () => {
   const toggleBtn = document.getElementById("themeToggle");
   const themeIcon = document.getElementById("themeIcon");
-  const debug = document.getElementById("debugTheme");
 
   const storageKey = "theme";
   const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
@@ -210,13 +209,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // =======================
   function applyTheme(theme) {
     document.documentElement.setAttribute("data-theme", theme);
-
-    // debug on screen
-    if (debug) {
-      debug.innerText = "Theme: " + theme;
-    }
-
-    console.log("Theme applied:", theme);
 
     // icon switch
     if (themeIcon) {

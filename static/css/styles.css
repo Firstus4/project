@@ -708,13 +708,14 @@ img {
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
-.contact h3 {
-  color: var(--muted);
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  text-align: center;
-  padding: 3rem;
+.info-item .content {
+  transition: all 0.3s ease;
 }
+
+.info-item .content:hover {
+  transform: translateY(-10px);
+}
+
 
 .contact a {
   text-decoration: none;
@@ -745,13 +746,16 @@ img {
   text-align: center;
 }
 
-.contact .info-box {
+.info-box {
   width: 100%;
   max-width: 720px; 
   margin: 0 auto;
+  text-align: center;
+  padding: 0.5rem;
+  color: var(--muted);
 }
 
-.contact .info-item {
+.info-item {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -759,7 +763,7 @@ img {
   margin-bottom: 1.25rem;
 }
 
-.contact .icon-box {
+.icon-box {
   width: 48px;
   height: 48px;
   display: flex;
@@ -769,7 +773,7 @@ img {
   font-size: 20px;
 }
 
-.contact .info-item .content {
+.info-item .content {
   text-align: center; 
 }
 
